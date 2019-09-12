@@ -20,6 +20,7 @@ public class AccountDTO {
     private String account_prof2;
     private int account_level;
 
+    
     public AccountDTO(Account ac) {
         this.account_username = ac.getUsername();
         this.account_charClass = ac.getCharClass();
