@@ -3,9 +3,13 @@ html
     scroll-behavior: smooth;
 }
 
+body {
+  padding-top: 40px;
+}
+
 .jumbotron {
     border-radius: 0;
-    background: url('background.jpg');
+    background: url('images/background.jpg');
     background-size: cover;
     height: 100vh;
 
@@ -69,6 +73,7 @@ nav ul li a:hover
 .sectionheadline
 {
     text-align: center;
+    padding: 40px;
 }
 
 .carousel-item img
@@ -87,7 +92,7 @@ nav ul li a:hover
 {
     .jumbotron
     {
-        background: url("background2.png");
+        background: url("images/background2.png");
         background-size: cover;
     }
     section

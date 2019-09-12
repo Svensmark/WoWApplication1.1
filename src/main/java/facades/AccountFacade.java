@@ -216,6 +216,20 @@ public class AccountFacade implements AccountInterface{
         return getAllAccounts().size();
     }
 
+    @Override
+    public void populateDummyAccounts() {
+        addAccount(new Account("Username1","Password1","Mage","Frost","DPS","Enchanting","Tailoring",
+                                    37, "Description of me", "A reason to join the guild", false));
+        addAccount(new Account("Username2","Password2","Warrior","Protection","Tank","Mining","Blacksmithing",
+                                    37, "Description of me", "A reason to join the guild", false));
+        addAccount(new Account("Username3","Password3","Warrior","Fury","DPS","Blacksmithing","Mining",
+                                    37, "Description of me", "A reason to join the guild", false));
+        addAccount(new Account("Username4","Password4","Mage","Frost","DPS","Enchanting","Skinning",
+                                    37, "Description of me", "A reason to join the guild", false));
+        addAccount(new Account("Username5","Password5","Priest","Holy","Healer","Herbalism","Alchemy",
+                                    37, "Description of me", "A reason to join the guild", false));
+    }
+
     
     
 }

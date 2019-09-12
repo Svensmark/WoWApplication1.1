@@ -57,7 +57,7 @@
         <main role="main">
             <div class="jumbotron">
                 <div class="container">
-                    <h1 class="display-3">Sheepless Nights</h1>
+                    <h1 class="display-3 sectionheadline">Sheepless Nights</h1>
                 </div>
             </div>
 
@@ -75,7 +75,7 @@
                                 </ol>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="background.jpg" class="d-block w-100" alt="...">
+                                        <img src="images/background.jpg" class="d-block w-100" alt="...">
                                         <div class="carousel-caption d-none d-md-block">
                                             <h5>Welcome home!</h5>
                                             <p>The journey starts 27-08-2019..</p>
@@ -154,7 +154,7 @@
                     <div class="row">
 
                         <div class="card container-fluid" style="width: 18rem;">
-                            <img src="shadowfangkeep.jpg" class="card-img-top" alt="...">
+                            <img src="images/shadowfangkeep.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -164,7 +164,7 @@
                             </ul>
                         </div>
                         <div class="card container-fluid" style="width: 18rem;">
-                            <img src="shadowfangkeep.jpg" class="card-img-top" alt="...">
+                            <img src="images/shadowfangkeep.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -184,12 +184,12 @@
 
                         <ul class="list-group">
                             <li class="list-group-item"><h1>Tanks</h1></li>
-                            <li class="list-group-item list-group-item-secondary">A simple secondary list group item</li>
-                            <li class="list-group-item list-group-item-secondary">A simple secondary list group item</li>
-                            <li class="list-group-item list-group-item-secondary">A simple secondary list group item</li>
-                            <li class="list-group-item list-group-item-secondary">A simple secondary list group item</li>
-                            <li class="list-group-item list-group-item-secondary">A simple secondary list group item</li>
-                            <li class="list-group-item list-group-item-secondary">A simple secondary list group item</li>
+                            <li class="list-group-item list-group-item-secondary">A simple succes list group item</li>
+                            <li class="list-group-item list-group-item-secondary">A simple succes list group item</li>
+                            <li class="list-group-item list-group-item-secondary">A simple succes list group item</li>
+                            <li class="list-group-item list-group-item-secondary">A simple succes list group item</li>
+                            <li class="list-group-item list-group-item-secondary">A simple succes list group item</li>
+                            <li class="list-group-item list-group-item-secondary">A simple succes list group item</li>
                         </ul>
 
                         <ul class="list-group">
@@ -232,7 +232,7 @@
                     <div class="row">
 
                         <div class="card container-fluid" style="width: 13rem;">
-                            <img src="AlchemyLogo.JPG" class="card-img-top" alt="alchemylogo">
+                            <img src="images/AlchemyLogo.JPG" class="card-img-top" alt="alchemylogo">
                             <div class="card-body">
                                 <h5 class="card-title">Alchemy</h5>
                                 <p class="card-text">User1</p>
@@ -240,7 +240,7 @@
                             </div>
                         </div>
                         <div class="card container-fluid" style="width: 13rem;">
-                            <img src="BlacksmithingLogo.JPG" class="card-img-top" alt="...">
+                            <img src="images/BlacksmithingLogo.JPG" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Blacksmithing</h5>
                                 <p class="card-text">User1</p>
@@ -248,7 +248,7 @@
                             </div>
                         </div>
                         <div class="card container-fluid" style="width: 13rem;">
-                            <img src="EnchantingLogo.JPG" class="card-img-top" alt="...">
+                            <img src="images/EnchantingLogo.JPG" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Enchanting</h5>
                                 <p class="card-text">User1</p>
@@ -256,7 +256,7 @@
                             </div>
                         </div>
                         <div class="card container-fluid" style="width: 13rem;">
-                            <img src="EngineeringLogo.JPG" class="card-img-top" alt="...">
+                            <img src="images/EngineeringLogo.JPG" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Engineering</h5>
                                 <p class="card-text">User1</p>
@@ -264,7 +264,7 @@
                             </div>
                         </div>
                         <div class="card container-fluid" style="width: 13rem;">
-                            <img src="LWLogo.JPG" class="card-img-top" alt="...">
+                            <img src="images/LWLogo.JPG" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Leatherwork</h5>
                                 <p class="card-text">User1</p>
@@ -273,7 +273,7 @@
                         </div>
                         
                         <div class="card container-fluid" style="width: 13rem;">
-                            <img src="TailoringLogo.JPG" class="card-img-top" alt="...">
+                            <img src="images/TailoringLogo.JPG" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Tailoring</h5>
                                 <p class="card-text">User1</p>
@@ -281,7 +281,7 @@
                             </div>
                         </div>
                         <div class="card container-fluid" style="width: 13rem;">
-                            <img src="HerbalismLogo.JPG" class="card-img-top" alt="...">
+                            <img src="images/HerbalismLogo.JPG" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Herbalism</h5>
                                 <p class="card-text">User1</p>
@@ -289,7 +289,7 @@
                             </div>
                         </div>
                         <div class="card container-fluid" style="width: 13rem;">
-                            <img src="MiningLogo.JPG" class="card-img-top" alt="...">
+                            <img src="images/MiningLogo.JPG" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Mining</h5>
                                 <p class="card-text">User1</p>
@@ -297,7 +297,7 @@
                             </div>
                         </div>
                         <div class="card container-fluid" style="width: 13rem;">
-                            <img src="SkinningLogo.JPG" class="card-img-top" alt="...">
+                            <img src="images/SkinningLogo.JPG" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Skinning</h5>
                                 <p class="card-text">User1</p>
@@ -305,7 +305,7 @@
                             </div>
                         </div>
                         <div class="card container-fluid" style="width: 13rem;">
-                            <img src="CookingLogo.JPG" class="card-img-top" alt="...">
+                            <img src="images/CookingLogo.JPG" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Cooking</h5>
                                 <p class="card-text">User1</p>

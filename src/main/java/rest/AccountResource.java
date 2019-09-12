@@ -16,7 +16,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 //Todo Remove or change relevant parts before ACTUAL use
-@Path("xxx")
+@Path("accounts")
 public class AccountResource {
 
     private static final EntityManagerFactory EMF = EMF_Creator.createEntityManagerFactory(
@@ -34,15 +34,47 @@ public class AccountResource {
         return "{\"msg\":\"Hello World\"}";
     }
     
-    /*
-    @Path("count")
+    
+    @Path("/count")
     @GET
     @Produces({MediaType.APPLICATION_JSON})
-    public String getRenameMeCount() {
+    public String getAccountCount() {
         long count = FACADE.getAmountOfMembers();
         //System.out.println("--------------->"+count);
         return "{\"count\":"+count+"}";  //Done manually so no need for a DTO
     }
-    */
- 
+    
+    @Path("/all")
+    @GET
+    @Produces({MediaType.APPLICATION_JSON})
+    public String getAllAccounts() {
+        return GSON.toJson(FACADE.getAllAccounts());
+    }
+    
+    @Path("/populate")
+    @GET
+    @Produces({MediaType.APPLICATION_JSON})
+    public String populate() {
+        FACADE.populateDummyAccounts();
+        return"{\"msg\":\"Your database has been populated..\"}";
+    }
+    
+    @Path("/deleteAll")
+    @GET
+    @Produces({MediaType.APPLICATION_JSON})
+    public String deleteAll() {
+        FACADE.deleteAllAccounts();
+        return"{\"msg\":\"Your database has been cleared..\"}";
+    }
+    
+    
+    @Path("/get/role/{role}")
+    @GET
+    @Produces({MediaType.APPLICATION_JSON})
+    public String getRole(Account entity, @PathParam("role") String role) {
+        return GSON.toJson(FACADE.getAccountsByRole(role));
+    }
+    
+    
+    
 }

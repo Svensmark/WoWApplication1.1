@@ -38,4 +38,6 @@ public interface AccountInterface {
     public ArrayList<AccountDTO> getAccountsByProfDTO(String prof);
     
     public ArrayList<AccountDTO> getAllAccountsDTO();
+    
+    public void populateDummyAccounts();
 }
