@@ -199,9 +199,7 @@ public class AccountFacade implements AccountInterface{
             aldto.add(new AccountDTO(al.get(i)));
         }
         return aldto;
-    }
-
-    
+    }    
     
     @Override
     public void deleteAllAccounts() {
