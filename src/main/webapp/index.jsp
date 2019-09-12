@@ -24,7 +24,7 @@
 
     <body>        
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="#">Murloc Companions</a>
+            <a class="navbar-brand" href="#">Sleepless Nights</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -57,7 +57,7 @@
         <main role="main">
             <div class="jumbotron">
                 <div class="container">
-                    <h1 class="display-3">The Murloc Companions</h1>
+                    <h1 class="display-3">Sheepless Nights</h1>
                 </div>
             </div>
 

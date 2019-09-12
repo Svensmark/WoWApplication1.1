@@ -1,6 +1,7 @@
-package rest;
+    package rest;
 
-import entities.RenameMe;
+import entities.Account;
+import facades.AccountFacade;
 import utils.EMF_Creator;
 import io.restassured.RestAssured;
 import static io.restassured.RestAssured.given;
@@ -24,13 +25,13 @@ import utils.EMF_Creator.Strategy;
 
 //Uncomment the line below, to temporarily disable this test
 //@Disabled
-public class RenameMeResourceTest {
+public class AccountResourceTest {
 
     private static final int SERVER_PORT = 7777;
     private static final String SERVER_URL = "http://localhost/api";
     //Read this line from a settings-file  since used several places
-    private static final String TEST_DB = "jdbc:mysql://localhost:3307/startcode_test";
-
+    private static final String TEST_DB = "jdbc:mysql://localhost:3307/WoWApplication_test";
+    private static AccountFacade FACADE;
     static final URI BASE_URI = UriBuilder.fromUri(SERVER_URL).port(SERVER_PORT).build();
     private static HttpServer httpServer;
     private static EntityManagerFactory emf;
@@ -39,13 +40,14 @@ public class RenameMeResourceTest {
         ResourceConfig rc = ResourceConfig.forApplication(new ApplicationConfig());
         return GrizzlyHttpServerFactory.createHttpServer(BASE_URI, rc);
     }
-
+    
+    
     @BeforeAll
     public static void setUpClass() {
         emf = EMF_Creator.createEntityManagerFactory(DbSelector.TEST, Strategy.CREATE);
 
         //NOT Required if you use the version of EMF_Creator.createEntityManagerFactory used above        
-        //System.setProperty("IS_TEST", TEST_DB);
+        System.setProperty("IS_TEST", TEST_DB);
         //We are using the database on the virtual Vagrant image, so username password are the same for all dev-databases
         
         httpServer = startServer();
@@ -70,9 +72,10 @@ public class RenameMeResourceTest {
         EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
-            em.createNamedQuery("RenameMe.deleteAllRows").executeUpdate();
-            em.persist(new RenameMe("Some txt","More text"));
-            em.persist(new RenameMe("aaa","bbb"));
+            em.createNamedQuery("Account.deleteAllRows").executeUpdate();
+            
+            em.persist(new Account("Username1","Password1","Mage","Frost","DPS","Enchanting","Tailoring",
+                                    37, "Description of me", "A reason to join the guild", false));
            
             em.getTransaction().commit();
         } finally {
@@ -97,6 +100,7 @@ public class RenameMeResourceTest {
         .body("msg", equalTo("Hello World"));   
     }
     
+    /*
     @Test
     public void testCount() throws Exception {
         given()
@@ -106,4 +110,5 @@ public class RenameMeResourceTest {
         .statusCode(HttpStatus.OK_200.getStatusCode())
         .body("count", equalTo(2));   
     }
+    */
 }
