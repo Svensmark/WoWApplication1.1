@@ -75,6 +75,13 @@ public class AccountResource {
         return GSON.toJson(FACADE.getAccountsByRole(role));
     }
     
+    @Path("/get/prof/{prof}")
+    @GET
+    @Produces({MediaType.APPLICATION_JSON})
+    public String getProf(Account entity, @PathParam("prof") String prof) {
+        return GSON.toJson(FACADE.getAccountsByProfDTO(prof));
+    }
     
+
     
 }

@@ -18,6 +18,7 @@
                 integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="main.css">
+        <script type="text/javascript" src="scripts/mainScript.js" defer></script>
 
         <title>Template</title>
     </head>
@@ -180,7 +181,7 @@
             <div class="content" id="members">
                 <div class="container">
                     <h1 class="sectionheadline"> Members </h1>
-                    <div class="row">
+                    <div class="row membersList">
 
                         <ul class="list-group">
                             <li class="list-group-item"><h1>Tanks</h1></li>
@@ -200,6 +201,7 @@
                             <li class="list-group-item list-group-item-success">A simple success list group item</li>
                             <li class="list-group-item list-group-item-success">A simple success list group item</li>
                         </ul>
+                        
                         <ul class="list-group">
                             <li class="list-group-item"><h1>DPS</h1></li>
                             <li class="list-group-item list-group-item-danger">A simple success list group item</li>
@@ -213,6 +215,7 @@
                             <li class="list-group-item list-group-item-danger">A simple success list group item</li>
                             <li class="list-group-item list-group-item-danger">A simple success list group item</li>
                         </ul>
+                        
                         <ul class="list-group">
                             <li class="list-group-item"><h1>Reserves</h1></li>
                             <li class="list-group-item list-group-item-primary">A simple success list group item</li>
