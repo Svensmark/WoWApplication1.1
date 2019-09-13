@@ -1,7 +1,7 @@
 getFetchData("get/role/Tank");
 
 function getFetchData(path) {
-    fetch("/WoWApplication/api/accounts/" + path)
+    fetch("/WoWApplication/api/account/" + path)
             .then(res => res.json())
             .then(data => {
                 console.log("data",data);
