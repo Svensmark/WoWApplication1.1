@@ -17,7 +17,6 @@
         <remote.server>http://emilsvensmark.dk/manager/text</remote.server>
         
     </properties>
-    <update>true></update>
     <dependencies>
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
