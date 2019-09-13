@@ -86,7 +86,7 @@ public class AccountResourceTest {
     @Test
     public void testServerIsUp() {
         System.out.println("Testing is server UP");
-        given().when().get("/accounts").then().statusCode(200);
+        given().when().get("/account").then().statusCode(200);
     }
    
     //This test assumes the database contains two rows
@@ -94,7 +94,7 @@ public class AccountResourceTest {
     public void testDummyMsg() throws Exception {
         given()
         .contentType("application/json")
-        .get("/accounts/").then()
+        .get("/account/").then()
         .assertThat()
         .statusCode(HttpStatus.OK_200.getStatusCode())
         .body("msg", equalTo("Hello World"));   
