@@ -216,15 +216,15 @@ public class AccountFacade implements AccountInterface{
 
     @Override
     public void populateDummyAccounts() {
-        addAccount(new Account("Username1","Password1","Mage","Frost","DPS","Enchanting","Tailoring",
+        addAccount(new Account("Username11","Password1","Druid","Feral","DPS","Leatherwork","Engineering",
                                     37, "Description of me", "A reason to join the guild", false));
-        addAccount(new Account("Username2","Password2","Warrior","Protection","Tank","Mining","Blacksmithing",
+        addAccount(new Account("Username12","Password2","Warlock","Demonology","Tank","Cooking","Blacksmithing",
                                     37, "Description of me", "A reason to join the guild", false));
-        addAccount(new Account("Username3","Password3","Warrior","Fury","DPS","Blacksmithing","Mining",
+        addAccount(new Account("Username13","Password3","Paladin","Retribution","DPS","Blacksmithing","Mining",
                                     37, "Description of me", "A reason to join the guild", false));
-        addAccount(new Account("Username4","Password4","Mage","Frost","DPS","Enchanting","Skinning",
+        addAccount(new Account("Username14","Password4","Mage","Frost","DPS","Enchanting","Skinning",
                                     37, "Description of me", "A reason to join the guild", false));
-        addAccount(new Account("Username5","Password5","Priest","Holy","Healer","Herbalism","Alchemy",
+        addAccount(new Account("Username15","Password5","Priest","Holy","Healer","Herbalism","Alchemy",
                                     37, "Description of me", "A reason to join the guild", false));
     }
 

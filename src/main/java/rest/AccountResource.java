@@ -48,7 +48,7 @@ public class AccountResource {
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public String getAllAccounts() {
-        return GSON.toJson(FACADE.getAllAccounts());
+        return GSON.toJson(FACADE.getAllAccountsDTO());
     }
     
     @Path("/populate")
@@ -72,7 +72,7 @@ public class AccountResource {
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public String getRole(Account entity, @PathParam("role") String role) {
-        return GSON.toJson(FACADE.getAccountsByRole(role));
+        return GSON.toJson(FACADE.getAccountsByRoleDTO(role));
     }
     
     @Path("/get/prof/{prof}")

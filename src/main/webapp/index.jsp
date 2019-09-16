@@ -180,51 +180,6 @@
                 <div class="container">
                     <h1 class="sectionheadline"> Members </h1>
                     <div class="row container-fluid" id="membersList">
-                        
-                        <!--
-                        <ul class="list-group">
-                            <li class="list-group-item"><h1>Tanks</h1></li>
-                            <li class="list-group-item list-group-item-secondary">A simple succes list group item</li>
-                            <li class="list-group-item list-group-item-secondary">A simple succes list group item</li>
-                            <li class="list-group-item list-group-item-secondary">A simple succes list group item</li>
-                            <li class="list-group-item list-group-item-secondary">A simple succes list group item</li>
-                            <li class="list-group-item list-group-item-secondary">A simple succes list group item</li>
-                            <li class="list-group-item list-group-item-secondary">A simple succes list group item</li>
-                        </ul>
-
-                        <ul class="list-group">
-                            <li class=\"list-group-item\"><h1>Healers</h1></li>
-                            <li class="list-group-item list-group-item-success">A simple success list group item</li>
-                            <li class="list-group-item list-group-item-success">A simple success list group item</li>
-                            <li class="list-group-item list-group-item-success">A simple success list group item</li>
-                            <li class="list-group-item list-group-item-success">A simple success list group item</li>
-                            <li class="list-group-item list-group-item-success">A simple success list group item</li>
-                        </ul>
-                        
-                        <ul class="list-group">
-                            <li class="list-group-item"><h1>DPS</h1></li>
-                            <li class="list-group-item list-group-item-danger">A simple success list group item</li>
-                            <li class="list-group-item list-group-item-danger">A simple success list group item</li>
-                            <li class="list-group-item list-group-item-danger">A simple success list group item</li>
-                            <li class="list-group-item list-group-item-danger">A simple success list group item</li>
-                            <li class="list-group-item list-group-item-danger">A simple success list group item</li>
-                            <li class="list-group-item list-group-item-danger">A simple success list group item</li>
-                            <li class="list-group-item list-group-item-danger">A simple success list group item</li>
-                            <li class="list-group-item list-group-item-danger">A simple success list group item</li>
-                            <li class="list-group-item list-group-item-danger">A simple success list group item</li>
-                            <li class="list-group-item list-group-item-danger">A simple success list group item</li>
-                        </ul>
-                        
-                        <ul class="list-group">
-                            <li class="list-group-item"><h1>Reserves</h1></li>
-                            <li class="list-group-item list-group-item-primary">A simple success list group item</li>
-                            <li class="list-group-item list-group-item-primary">A simple success list group item</li>
-                            <li class="list-group-item list-group-item-primary">A simple success list group item</li>
-                            <li class="list-group-item list-group-item-primary">A simple success list group item</li>
-                            <li class="list-group-item list-group-item-primary">A simple success list group item</li>
-                        </ul>
-                        -->
-
                     </div>
                 </div>
             </div>
@@ -233,86 +188,54 @@
                 <div class="container">
                     <h1 class="sectionheadline"> Profession Experts </h1>
                     <div class="row">
-
                         <div class="card container-fluid" style="width: 13rem;">
                             <img src="images/AlchemyLogo.JPG" class="card-img-top" alt="alchemylogo">
-                            <div class="card-body">
-                                <h5 class="card-title">Alchemy</h5>
-                                <p class="card-text">User1</p>
-                                <p class="card-text">User2</p>
+                            <div class="card-body" id="alchemyExpert">
                             </div>
                         </div>
                         <div class="card container-fluid" style="width: 13rem;">
                             <img src="images/BlacksmithingLogo.JPG" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Blacksmithing</h5>
-                                <p class="card-text">User1</p>
-                                <p class="card-text">User2</p>
+                            <div class="card-body" id="blacksmithingExpert">
                             </div>
                         </div>
                         <div class="card container-fluid" style="width: 13rem;">
                             <img src="images/EnchantingLogo.JPG" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Enchanting</h5>
-                                <p class="card-text">User1</p>
-                                <p class="card-text">User2</p>
+                            <div class="card-body" id="enchantingExpert">
                             </div>
                         </div>
                         <div class="card container-fluid" style="width: 13rem;">
                             <img src="images/EngineeringLogo.JPG" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Engineering</h5>
-                                <p class="card-text">User1</p>
-                                <p class="card-text">User2</p>
+                            <div class="card-body" id="engineeringExpert">
                             </div>
                         </div>
                         <div class="card container-fluid" style="width: 13rem;">
                             <img src="images/LWLogo.JPG" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Leatherwork</h5>
-                                <p class="card-text">User1</p>
-                                <p class="card-text">User2</p>
+                            <div class="card-body" id="leatherworkExpert">
                             </div>
                         </div>
-
                         <div class="card container-fluid" style="width: 13rem;">
                             <img src="images/TailoringLogo.JPG" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Tailoring</h5>
-                                <p class="card-text">User1</p>
-                                <p class="card-text">User2</p>
+                            <div class="card-body" id="tailoringExpert">
                             </div>
                         </div>
                         <div class="card container-fluid" style="width: 13rem;">
                             <img src="images/HerbalismLogo.JPG" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Herbalism</h5>
-                                <p class="card-text">User1</p>
-                                <p class="card-text">User2</p>
+                            <div class="card-body" id="herbalismExpert">
                             </div>
                         </div>
                         <div class="card container-fluid" style="width: 13rem;">
                             <img src="images/MiningLogo.JPG" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Mining</h5>
-                                <p class="card-text">User1</p>
-                                <p class="card-text">User2</p>
+                            <div class="card-body" id="miningExpert">
                             </div>
                         </div>
                         <div class="card container-fluid" style="width: 13rem;">
                             <img src="images/SkinningLogo.JPG" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Skinning</h5>
-                                <p class="card-text">User1</p>
-                                <p class="card-text">User2</p>
+                            <div class="card-body" id="skinningExpert">
                             </div>
                         </div>
                         <div class="card container-fluid" style="width: 13rem;">
                             <img src="images/CookingLogo.JPG" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Cooking</h5>
-                                <p class="card-text">User1</p>
-                                <p class="card-text">User2</p>
+                            <div class="card-body" id="cookingExpert">
                             </div>
                         </div>
 
@@ -333,7 +256,7 @@
             </div>
         </div>
 
-        <script type="text/javascript" src="scripts/mainScript.js" defer></script>
+        <script type="text/javascript" src="mainScript.js" defer></script>
 
     </body>
 </html>
