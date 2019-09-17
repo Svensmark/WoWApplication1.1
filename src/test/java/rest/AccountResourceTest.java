@@ -100,15 +100,15 @@ public class AccountResourceTest {
         .body("msg", equalTo("Hello World"));   
     }
     
-    /*
+    
     @Test
     public void testCount() throws Exception {
         given()
         .contentType("application/json")
-        .get("/accounts/count").then()
+        .get("account/count").then()
         .assertThat()
         .statusCode(HttpStatus.OK_200.getStatusCode())
-        .body("count", equalTo(2));   
+        .body("count", equalTo(1));   
     }
-    */
+    
 }
