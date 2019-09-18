@@ -8,6 +8,7 @@ package facades;
 import dto.EventDTO;
 import entities.Event;
 import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 
@@ -66,12 +67,27 @@ public class EventFacade implements EventInterface{
 
     @Override
     public ArrayList<Event> getAllEvents() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        EntityManager em = getEntityManager();
+        try {
+            List l = em.createNamedQuery("Account.getAll").getResultList();
+            ArrayList<Event> al = new ArrayList();
+        for (Object m : l) {
+            al.add((Event) m);
+        }
+        return al;
+        } finally {
+            em.close();
+        }
     }
 
     @Override
     public ArrayList<EventDTO> getAllEventsDTO() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ArrayList<Event> al = getAllEvents();
+        ArrayList<EventDTO> alDTO = new ArrayList();
+        for (int i = 0; i < al.size(); ++i) {
+            alDTO.add(new EventDTO(al.get(i)));
+        }
+        return alDTO;
     }
     
 }
