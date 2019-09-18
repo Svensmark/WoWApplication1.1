@@ -44,12 +44,24 @@ public class EventFacade implements EventInterface{
 
     @Override
     public Event addEvent(Event event) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        EntityManager em = getEntityManager();
+        em.getTransaction().begin();
+        em.persist(event);
+        em.getTransaction().commit();
+        return event;
     }
 
     @Override
     public void deleteEvent(Event event) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        EntityManager em = getEntityManager();
+        try {
+            em.getTransaction().begin();
+            Event ev = em.merge(event);
+            em.remove(ev);
+            em.getTransaction().commit();
+        } finally {
+            em.close();
+        }
     }
 
     @Override
