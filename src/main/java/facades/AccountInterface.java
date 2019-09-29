@@ -19,6 +19,8 @@ public interface AccountInterface {
         
     public void deleteAccount(Account account);
     
+    public Account editAccount(Account account);
+    
     public void deleteAllAccounts();
     
     public int getAmountOfMembers();

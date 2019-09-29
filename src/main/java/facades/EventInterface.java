@@ -22,5 +22,7 @@ public interface EventInterface {
     public ArrayList<Event> getAllEvents();
     
     public ArrayList<EventDTO> getAllEventsDTO();
+    
+    public void populateDummyEvents();
         
 }

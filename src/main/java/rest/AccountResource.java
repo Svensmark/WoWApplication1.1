@@ -14,6 +14,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 //Todo Remove or change relevant parts before ACTUAL use
 @Path("account")
@@ -82,6 +83,14 @@ public class AccountResource {
         return GSON.toJson(FACADE.getAccountsByProfDTO(prof));
     }
     
-
+    /*
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response addPerson(String account) {
+        Account a = GSON.fromJson(account, Account.class);
+        //Person pper = FACADE.addPerson(p.getFirstName(), p.getLastName(), p.getPhone(),p.getAddress());
+        return Response.ok(a).build();
+    }*/
     
 }

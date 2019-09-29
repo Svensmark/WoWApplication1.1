@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
   generateLegend();
 });
 
+
+
 function generateLegend() {
     getTankList();
     getHealerList();
@@ -113,7 +115,15 @@ function getCookingList() {
                 document.getElementById("cookingExpert").innerHTML += profList(data,"Cooking");
             });
 }
-
+function getEvents() {
+     document.getElementById("eventSection").innerHTML = "<p>Test</p>";
+    /*
+     fetch("/WoWApplication/api/event/all")
+            .then(res => res.json())
+            .then(data => {
+               
+            });*/
+}
 
 
 function tankList(data) {
@@ -148,5 +158,20 @@ function profList(data,prof) {
     return htmlString;
 }
 
-
+function eventList(data) {
+    var htmlString = "";
+    for (var a of data) {
+        htmlString += "<div class=\"card container-fluid\" style=\"width: 18rem;\">" +
+                        "<img src=\"" + a.imgUrl +"\" class=\"card-img-top\" alt=\"...\">" +
+                        "<div class=\"card-body\">" +
+                            "<h5 class=\"card-title\">" + a.title + "</h5>" +
+                            "<p class=\"card-text\">" + a.body + "</p>" +
+                        "</div>" +
+                        "<ul class=\"list-group list-group-flush\">";
+        
+        htmlString += "</ul></div>";
+        return htmlString;
+    }
+                           
+}
 

@@ -228,6 +228,29 @@ public class AccountFacade implements AccountInterface{
                                     37, "Description of me", "A reason to join the guild", false));
     }
 
+    @Override
+    public Account editAccount(Account account) {
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+
+        Account aMerge = em.find(Account.class, account.getId());
+        em.merge(aMerge);
+        aMerge.setAdmin(account.isAdmin());
+        aMerge.setCharClass(account.getCharClass());
+        aMerge.setDescription(account.getDescription());
+        aMerge.setLevel(account.getLevel());
+        aMerge.setMember(account.isMember());
+        aMerge.setProf1(account.getProf1());
+        aMerge.setProf2(account.getProf2());
+        aMerge.setRole(account.getRole());
+        aMerge.setSpec(account.getSpec());
+        aMerge.setUsername(account.getUsername());
+        em.getTransaction().commit();
+        em.close();
+        
+        return aMerge;
+    }
+
     
     
 }

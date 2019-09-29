@@ -69,11 +69,11 @@ public class EventFacade implements EventInterface{
     public ArrayList<Event> getAllEvents() {
         EntityManager em = getEntityManager();
         try {
-            List l = em.createNamedQuery("Account.getAll").getResultList();
+            List l = em.createNamedQuery("Event.getAll").getResultList();
             ArrayList<Event> al = new ArrayList();
-        for (Object m : l) {
-            al.add((Event) m);
-        }
+            l.forEach((e) -> {
+                al.add((Event) e);
+            });
         return al;
         } finally {
             em.close();
@@ -88,6 +88,20 @@ public class EventFacade implements EventInterface{
             alDTO.add(new EventDTO(al.get(i)));
         }
         return alDTO;
+    }
+
+    @Override
+    public void populateDummyEvents() {
+        Event e1 = new Event("https://pbs.twimg.com/media/CvoHcRiXYAA5fJc.jpg","Title","This is the body text", true);
+        Event e2 = new Event("https://www.plethorist.com/wp-content/uploads/2017/07/The-Worst-Stock-Photos-On-The-Internet-2.jpg","Title","This is the body text", true);
+        Event e3 = new Event("https://pbs.twimg.com/profile_images/949787136030539782/LnRrYf6e_400x400.jpg","Title","This is the body text", true);
+        Event e4 = new Event("https://i.imgur.com/5mXfwr1.jpg","Title","This is the body text", true);
+        
+        EventFacade ef = new EventFacade();
+        ef.addEvent(e1);
+        ef.addEvent(e2);
+        ef.addEvent(e3);
+        ef.addEvent(e4);
     }
     
 }

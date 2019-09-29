@@ -11,13 +11,18 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
+import javax.persistence.NamedQueries;
 
 /**
  *
  * @author emilt
  */
 @Entity
-@NamedQuery(name = "Event.deleteAllRows", query = "DELETE from Event")
+@NamedQueries ({
+    @NamedQuery(name = "Event.deleteAllRows", query = "DELETE from Event"),
+    @NamedQuery(name = "Event.getAll", query = "SELECT e FROM Event e")
+})
+
 public class Event implements Serializable {
 
     private static final long serialVersionUID = 1L;

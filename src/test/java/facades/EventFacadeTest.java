@@ -6,9 +6,12 @@
 package facades;
 
 import entities.Event;
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.TypedQuery;
 import org.junit.jupiter.api.AfterAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,7 +24,7 @@ import utils.EMF_Creator;
 public class EventFacadeTest {
 
     private static EntityManagerFactory emf;
-    private static AccountFacade facade;
+    private static EventFacade facade;
 
     public EventFacadeTest() {
     }
@@ -34,7 +37,7 @@ public class EventFacadeTest {
                 "dev",
                 "ax2",
                 EMF_Creator.Strategy.CREATE);
-        facade = AccountFacade.getAccountFacade(emf);
+        facade = EventFacade.getEventFacade(emf);
     }
 
     /*   **** HINT **** 
@@ -46,7 +49,7 @@ public class EventFacadeTest {
     @BeforeAll
     public static void setUpClassV2() {
         emf = EMF_Creator.createEntityManagerFactory(EMF_Creator.DbSelector.TEST, EMF_Creator.Strategy.DROP_AND_CREATE);
-        facade = AccountFacade.getAccountFacade(emf);
+        facade = EventFacade.getEventFacade(emf);
     }
 
     @AfterAll
@@ -70,12 +73,39 @@ public class EventFacadeTest {
     
     @Test
     public void testAddEvent() {
-        
+        EntityManager em = emf.createEntityManager();
+
+        TypedQuery<Event> query = em.createQuery("SELECT a FROM Event a", Event.class);
+        List l = query.getResultList();
+        int before = l.size();
+
+        Event e = new Event("url","tit","bod",true);
+        facade.addEvent(e);
+
+        l = query.getResultList();
+        int after = l.size();
+
+        assertEquals(before + 1, after);
     }
     
     @Test
     public void testDeleteEvent() {
+        EntityManager em = emf.createEntityManager();
+
+        TypedQuery<Event> query = em.createQuery("SELECT a FROM Event a", Event.class);
+        List l = query.getResultList();
+        int expected = l.size();
+
+        Event e = new Event("url","tit","bod",true);
+        em.getTransaction().begin();
+        em.persist(e);
+        em.getTransaction().commit();
+        facade.deleteEvent(e);
         
+        l = query.getResultList();
+        int result = l.size();
+        
+        assertEquals(expected,result);        
     }
     
     @Test
