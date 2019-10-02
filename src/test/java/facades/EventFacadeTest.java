@@ -5,6 +5,7 @@
  */
 package facades;
 
+import facades.EventFacade;
 import entities.Event;
 import java.util.List;
 import javax.persistence.EntityManager;

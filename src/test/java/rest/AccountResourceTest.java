@@ -1,5 +1,6 @@
     package rest;
 
+import rest.ApplicationConfig;
 import entities.Account;
 import facades.AccountFacade;
 import utils.EMF_Creator;

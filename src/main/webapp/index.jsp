@@ -48,7 +48,7 @@
                         <a class="nav-link" href="#professions">Professions<span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="loginandsignup.jsp">Signup<span class="sr-only"></span></a>
+                        <a class="nav-link" href="/WoWApplication/Signup">Signup<span class="sr-only"></span></a>
                     </li>
                 </ul>
             </div>

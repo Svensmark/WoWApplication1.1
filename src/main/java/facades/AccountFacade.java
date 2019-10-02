@@ -20,7 +20,7 @@ public class AccountFacade implements AccountInterface{
     private static EntityManagerFactory emf;
     
     //Private Constructor to ensure Singleton
-    private AccountFacade() {}
+    public AccountFacade() {}
     
     
     /**
@@ -36,7 +36,7 @@ public class AccountFacade implements AccountInterface{
         return instance;
     }
 
-    private EntityManager getEntityManager() {
+    private static EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
     

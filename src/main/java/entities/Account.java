@@ -61,6 +61,15 @@ public class Account implements Serializable {
         this.isMember = member;
     }
     
+    public Account(String username, String charClass, String role, String prof1, String prof2) {
+        this.username = username;
+        this.charClass = charClass;
+        this.role = role;
+        this.prof1 = prof1;
+        this.prof2 = prof2;
+        this.isMember = false;
+    }
+    
         
     
     public Long getId() {
