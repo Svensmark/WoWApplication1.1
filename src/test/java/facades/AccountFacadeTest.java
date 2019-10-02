@@ -137,11 +137,6 @@ public class AccountFacadeTest {
     }
     
     @Test
-    public void testGetAccountBySpec() {
-        assertEquals("Frost",facade.getAccountsBySpec("Frost").get(0).getSpec());
-    }
-    
-    @Test
     public void testGetAccountByRole() {
         assertEquals("DPS",facade.getAccountsByRole("DPS").get(0).getRole());
     }

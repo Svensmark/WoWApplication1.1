@@ -27,7 +27,6 @@ public interface AccountInterface {
     
     public ArrayList<Account> getAccountsByUsername(String username);
     public ArrayList<Account> getAccountsByCharClass(String charClass);
-    public ArrayList<Account> getAccountsBySpec(String spec);
     public ArrayList<Account> getAccountsByRole(String role);
     public ArrayList<Account> getAccountsByProf(String prof);
     
@@ -35,11 +34,13 @@ public interface AccountInterface {
     
     public ArrayList<AccountDTO> getAccountsByUsernameDTO(String username);
     public ArrayList<AccountDTO> getAccountsByCharClassDTO(String charClass);
-    public ArrayList<AccountDTO> getAccountsBySpecDTO(String spec);
     public ArrayList<AccountDTO> getAccountsByRoleDTO(String role);
     public ArrayList<AccountDTO> getAccountsByProfDTO(String prof);
     
     public ArrayList<AccountDTO> getAllAccountsDTO();
+    
+    public ArrayList<AccountDTO> getAllMembersDTO();
+    
     
     public void populateDummyAccounts();
 }

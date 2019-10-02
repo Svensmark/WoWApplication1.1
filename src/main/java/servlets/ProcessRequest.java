@@ -9,12 +9,17 @@ import entities.Account;
 import facades.AccountFacade;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import utils.EMF_Creator;
+import utils.EMF_Creator.DbSelector;
+import utils.EMF_Creator.Strategy;
 
 /**
  *
@@ -23,11 +28,22 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "ProcessRequest", urlPatterns = {"/ProcessRequest"})
 public class ProcessRequest extends HttpServlet {
 
+    private static final EntityManagerFactory EMF = EMF_Creator.createEntityManagerFactory(
+                "pu",
+                "jdbc:mysql://localhost:3307/WoWApplication",
+                "dev",
+                "ax2",
+                EMF_Creator.Strategy.CREATE);
+    private static final AccountFacade facade =  AccountFacade.getAccountFacade(EMF);
+    
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-
-        AccountFacade facade = new AccountFacade();
+        
+        
+        
+        
         Cookie[] cookies = request.getCookies();
         StringBuilder sb = new StringBuilder();
         boolean flag = true;

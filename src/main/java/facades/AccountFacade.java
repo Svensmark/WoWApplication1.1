@@ -20,7 +20,7 @@ public class AccountFacade implements AccountInterface{
     private static EntityManagerFactory emf;
     
     //Private Constructor to ensure Singleton
-    public AccountFacade() {}
+    private AccountFacade() {}
     
     
     /**
@@ -91,17 +91,6 @@ public class AccountFacade implements AccountInterface{
         return l;
     }
 
-    @Override
-    public ArrayList<Account> getAccountsBySpec(String spec) {
-        EntityManager em = getEntityManager();
-        TypedQuery<Account> query = em.createQuery("SELECT a FROM Account a WHERE a.spec = :search", Account.class);
-        query.setParameter("search", spec);
-        ArrayList<Account> l = new ArrayList();
-        for (Account m : query.getResultList()) {
-            l.add((Account) m);
-        }
-        return l;
-    }
 
     @Override
     public ArrayList<Account> getAccountsByRole(String role) {
@@ -154,16 +143,6 @@ public class AccountFacade implements AccountInterface{
     @Override
     public ArrayList<AccountDTO> getAccountsByCharClassDTO(String charClass) {
         ArrayList<Account> al = getAccountsByCharClass(charClass);
-        ArrayList<AccountDTO> aldto = new ArrayList();
-        for (int i = 0; i < al.size(); ++i) {
-            aldto.add(new AccountDTO(al.get(i)));
-        }
-        return aldto;
-    }
-
-    @Override
-    public ArrayList<AccountDTO> getAccountsBySpecDTO(String spec) {
-        ArrayList<Account> al = getAccountsBySpec(spec);
         ArrayList<AccountDTO> aldto = new ArrayList();
         for (int i = 0; i < al.size(); ++i) {
             aldto.add(new AccountDTO(al.get(i)));
@@ -249,6 +228,11 @@ public class AccountFacade implements AccountInterface{
         em.close();
         
         return aMerge;
+    }
+
+    @Override
+    public ArrayList<AccountDTO> getAllMembersDTO() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     

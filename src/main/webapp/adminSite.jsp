@@ -32,22 +32,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#news">News <span class="sr-only"></span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#events">Events<span class="sr-only"></span></a>
+                        <a class="nav-link" href="#applications">Applications <span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="#members">Members<span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#professions">Professions<span class="sr-only"></span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="loginandsignup.jsp">Login | Signup<span class="sr-only"></span></a>
+                        <a class="nav-link" href="#events">Event Settings<span class="sr-only"></span></a>
                     </li>
                 </ul>
             </div>
@@ -60,18 +51,18 @@
                 </div>
             </div>
 
-            <div class="content" id="home">
+            <div class="content" id="applications">
                 <div class="container">
-                    <h1 class="sectionheadline"> Home Settings </h1>
+                    <h1 class="sectionheadline"> New Applications </h1>
                     <div class="row">
 
                     </div>
                 </div>
             </div>
 
-            <div class="content" id="news">
+            <div class="content" id="members">
                 <div class="container">
-                    <h1 class="sectionheadline"> News Settings </h1>
+                    <h1 class="sectionheadline"> Members </h1>
                     <div class="row">
                         
                     </div>
@@ -81,85 +72,15 @@
             <div class="content" id="events">
                 <div class="container">
                     <h1 class="sectionheadline"> Events Settings </h1>
-                    <div class="row">
-
-                        
+                    <div class="row">                        
                         
                     </div>
                 </div>
             </div>
 
-            <div class="content" id="members">
-                <div class="container">
-                    <h1 class="sectionheadline"> Members </h1>
-                    <div class="row container-fluid" id="membersList">
-                    </div>
-                </div>
-            </div>
 
-            <div class="content" id="professions">
-                <div class="container">
-                    <h1 class="sectionheadline"> Profession Experts </h1>
-                    <div class="row">
-                        <div class="card container-fluid" style="width: 13rem;">
-                            <img src="images/AlchemyLogo.JPG" class="card-img-top" alt="alchemylogo">
-                            <div class="card-body" id="alchemyExpert">
-                            </div>
-                        </div>
-                        <div class="card container-fluid" style="width: 13rem;">
-                            <img src="images/BlacksmithingLogo.JPG" class="card-img-top" alt="...">
-                            <div class="card-body" id="blacksmithingExpert">
-                            </div>
-                        </div>
-                        <div class="card container-fluid" style="width: 13rem;">
-                            <img src="images/EnchantingLogo.JPG" class="card-img-top" alt="...">
-                            <div class="card-body" id="enchantingExpert">
-                            </div>
-                        </div>
-                        <div class="card container-fluid" style="width: 13rem;">
-                            <img src="images/EngineeringLogo.JPG" class="card-img-top" alt="...">
-                            <div class="card-body" id="engineeringExpert">
-                            </div>
-                        </div>
-                        <div class="card container-fluid" style="width: 13rem;">
-                            <img src="images/LWLogo.JPG" class="card-img-top" alt="...">
-                            <div class="card-body" id="leatherworkExpert">
-                            </div>
-                        </div>
-                        <div class="card container-fluid" style="width: 13rem;">
-                            <img src="images/TailoringLogo.JPG" class="card-img-top" alt="...">
-                            <div class="card-body" id="tailoringExpert">
-                            </div>
-                        </div>
-                        <div class="card container-fluid" style="width: 13rem;">
-                            <img src="images/HerbalismLogo.JPG" class="card-img-top" alt="...">
-                            <div class="card-body" id="herbalismExpert">
-                            </div>
-                        </div>
-                        <div class="card container-fluid" style="width: 13rem;">
-                            <img src="images/MiningLogo.JPG" class="card-img-top" alt="...">
-                            <div class="card-body" id="miningExpert">
-                            </div>
-                        </div>
-                        <div class="card container-fluid" style="width: 13rem;">
-                            <img src="images/SkinningLogo.JPG" class="card-img-top" alt="...">
-                            <div class="card-body" id="skinningExpert">
-                            </div>
-                        </div>
-                        <div class="card container-fluid" style="width: 13rem;">
-                            <img src="images/CookingLogo.JPG" class="card-img-top" alt="...">
-                            <div class="card-body" id="cookingExpert">
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                </div>
-            </div>
 
         </main>
-        
         
     </body>
 </html>
