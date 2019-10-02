@@ -9,7 +9,6 @@ import entities.Account;
 import facades.AccountFacade;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,8 +17,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import utils.EMF_Creator;
-import utils.EMF_Creator.DbSelector;
-import utils.EMF_Creator.Strategy;
 
 /**
  *
@@ -34,7 +31,7 @@ public class ProcessRequest extends HttpServlet {
                 "dev",
                 "ax2",
                 EMF_Creator.Strategy.CREATE);
-    private static final AccountFacade facade =  AccountFacade.getAccountFacade(EMF);
+    private static final AccountFacade FACADE =  AccountFacade.getAccountFacade(EMF);
     
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -45,7 +42,7 @@ public class ProcessRequest extends HttpServlet {
         
         
         Cookie[] cookies = request.getCookies();
-        StringBuilder sb = new StringBuilder();
+        String  sb = "";
         boolean flag = true;
         String ignName = request.getParameter("ignName");
         String charClass = request.getParameter("charClass");
@@ -56,23 +53,23 @@ public class ProcessRequest extends HttpServlet {
         if (cookies != null) {
             for (Cookie cookie : request.getCookies()) {
                 if (cookie.getName().equals("Account")) {
-                    sb.append("You have already made an account!");
+                    sb = "You have already made an account!";
                     flag = false;
                 }
             }
             if (flag) {
-                sb.append("Thank you for registering ").append(request.getParameter("ignName")).append("!");
+                sb = "Thank you for registering " + request.getParameter("ignName");
                 Cookie cookie = new Cookie("Account", "Sorry");
                 cookie.setMaxAge(60 * 60 * 24 * 365);
                 response.addCookie(cookie);
-                facade.addAccount(new Account(ignName, charClass, role, primProf, secondProf));
+                FACADE.addAccount(new Account(ignName, charClass, role, primProf, secondProf));
             }
         } else {
-            sb.append("Thank you for registering ").append(request.getParameter("ignName")).append("!");
+            sb = "Thank you for registering " + request.getParameter("ignName");
             Cookie cookie = new Cookie("Account", "Sorry");
             cookie.setMaxAge(60 * 60 * 24 * 365);
             response.addCookie(cookie);
-            facade.addAccount(new Account(ignName, charClass, role, primProf, secondProf));
+            FACADE.addAccount(new Account(ignName, charClass, role, primProf, secondProf));
         }
 
         response.setContentType("text/html;charset=UTF-8");
